@@ -17,4 +17,11 @@ class TwigViewTest extends TestCase
 
         $this->assertEquals("I am a Doctor, not a magician!\n", (string) $app->view);
     }
+
+    public function testTemplateNotSet()
+    {
+        $app = new App();
+        $app->view = '\MinorWork\View\TwigView';
+        $this->assertEquals("", (string) $app->view);
+    }
 }

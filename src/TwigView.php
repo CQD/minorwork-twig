@@ -55,6 +55,10 @@ class TwigView
      */
     public function __toString()
     {
+        if (!$this->template) {
+            return '';
+        }
+
         $this->twig = $this->twig ?: new Twig(new FileLoader($this->basePath), $this->twigOptions);
 
         return $this->twig->render($this->template, $this->params);
