@@ -2,8 +2,8 @@
 
 namespace MinorWork\View;
 
-use Twig_Loader_Filesystem as FileLoader;
-use Twig_Environment as Twig;
+use Twig\Loader\FilesystemLoader as FileLoader;
+use Twig\Environment as Twig;
 
 class TwigView
 {
